@@ -1,0 +1,23 @@
+[
+  {
+    "email": "daniel@somemail.com",
+    "imageUrl":"https://bootdey.com/img/Content/avatar/avatar3.png",
+    "jobTitle": "JavaScript",
+    "name": "Daniel Brown",
+    "phone":"45679845"
+  },
+  {
+    "email": "christina@somemail.com",
+    "imageUrl":"https://bootdey.com/img/Content/avatar/avatar2.png",
+    "jobTitle": "UX/UI",
+    "name": "Christina Gilbert",
+    "phone":"789465123"
+  },
+  {
+    "email": "dave@somemail.com",
+    "imageUrl":"https://bootdey.com/img/Content/avatar/avatar4.png",
+    "jobTitle": "Java",
+    "name": "Dave Matthews",
+    "phone":"3579514862"
+  }
+]

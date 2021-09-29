@@ -18,3 +18,7 @@ initial includes following features:
 * Update Employee Information
 * Delete Employee by ID
 * Search employee on dynamic input by related information.
+
+Here is a little preview of the operations: 
+
+![](https://github.com/AbidSaleh/Employee-Management-App/blob/main/Operation%20Demonstration.gif)

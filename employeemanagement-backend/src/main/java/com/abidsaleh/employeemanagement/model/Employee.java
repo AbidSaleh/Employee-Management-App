@@ -1,14 +1,19 @@
 package com.abidsaleh.employeemanagement.model;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@ApiModel(description = "Details about an Employee")
 public class Employee implements Serializable {
 
     @Id //primary key
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
+    @ApiModelProperty(notes = "The unique id of the Employee, non nullable, non updatable")
     private Long id;
     private String name;
     private String email;
@@ -16,6 +21,7 @@ public class Employee implements Serializable {
     private String phone;
     private String imageUrl;
     @Column(nullable = false, updatable = false)
+    @ApiModelProperty(notes = "Randomly generated , non nullable, non updatable")
     private String employeeCode;
 
     public Employee() {

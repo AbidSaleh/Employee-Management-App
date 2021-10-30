@@ -2,12 +2,12 @@
 An employee management app created with Angular 12 and Spring boot 2.5.4
 
 This project is built using following technologies:
-
-  Spring Boot </br>
-  Angular </br>
-  MySQL </br>
-  Spring Data JPA </br>
-  TypeScript </br>
+  
+  Languages: JAVA, JavaScript, TypeScript </br>
+  Framework: Spring Boot, Angular</br>
+  DataBase: MySQL</br>
+  Testing: JUnit4, Mockito.</br>
+  Others : Swagger , Spring Data JPA, Hibernate</br>
   
 Backend endpoints are exposed using RESTful specification.
 
@@ -22,3 +22,7 @@ initial includes following features:
 Here is a little preview of the operations: 
 
 ![](https://github.com/AbidSaleh/Employee-Management-App/blob/main/Operation%20Demonstration.gif)
+
+Swagger UI for API endpoints
+
+![](https://github.com/AbidSaleh/Employee-Management-App/blob/main/employeemanagement-backend/swagger-ui-upd.png)

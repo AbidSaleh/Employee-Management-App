@@ -56,7 +56,7 @@ public class EmployeeResourceTest {
                 .thenReturn(employees);
 
         //assertion
-        mockMvc.perform(get("/employee/all"))
+        mockMvc.perform(get("/employees"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$").isArray())
@@ -76,7 +76,7 @@ public class EmployeeResourceTest {
         when(employeeService.findEmployeeById(EMPLOYEE_ID)).thenReturn(employee);
 
         //assertion
-        mockMvc.perform(get("/employee/find/{id}", EMPLOYEE_ID))
+        mockMvc.perform(get("/employees/{id}", EMPLOYEE_ID))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.id").value(EMPLOYEE_ID))
@@ -98,7 +98,7 @@ public class EmployeeResourceTest {
         when(employeeService.addEmployee(any(Employee.class))).thenReturn(employee);
 
         //assertion
-        mockMvc.perform(post("/employee/add/").content(jsonString).contentType(MediaType.APPLICATION_JSON))
+        mockMvc.perform(post("/employees/").content(jsonString).contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isCreated())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.id").value(EMPLOYEE_ID))
@@ -121,7 +121,7 @@ public class EmployeeResourceTest {
         when(employeeService.updateEmployee(any(Employee.class))).thenReturn(employee);
 
         //assertion
-        mockMvc.perform(put("/employee/update/").content(jsonString).contentType(MediaType.APPLICATION_JSON))
+        mockMvc.perform(put("/employees/").content(jsonString).contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.id").value(EMPLOYEE_ID))
@@ -139,7 +139,7 @@ public class EmployeeResourceTest {
         //when-then
         Mockito.doNothing().when(employeeService).deleteEmployee(anyLong());
         //assertion
-        mockMvc.perform(delete("/employee/delete/{id}", EMPLOYEE_ID)
+        mockMvc.perform(delete("/employees/{id}", EMPLOYEE_ID)
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
 
